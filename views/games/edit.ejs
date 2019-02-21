@@ -1,0 +1,14 @@
+<% include ../partials/header.ejs %>
+
+<h1>EDIT <%= game.name %></h1>
+
+<form method="POST" action="/games/<%= game.id%>/?_method=PUT">
+  <input type="text" name="name" value="<%= game.name %>" /><br />
+  <input type="text" name="description" value="<%= game.description %>" /><br />
+  <input type="text" name="players" value="<%= game.players %>" />
+  <br />
+  <input type="submit" class="button" value="Update" />
+</form>
+<a href="/games/<%= game.id %>">Go Back</a>
+
+<% include ../partials/footer.ejs %>

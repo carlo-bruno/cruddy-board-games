@@ -1,0 +1,14 @@
+<% include ../partials/header.ejs %>
+
+<h1>VIEW GAME</h1>
+
+<h2> <%= game.name %></h2>
+<p> <%= game.description %></p>
+<p> Max Players: <%= game.players %></p>
+
+<a href="/games/<%= game.id %>/edit">edit</a>
+<form method="POST" action="/games/<%= game.id %>?_method=DELETE">
+  <input type="submit" value="Delete">
+</form>
+
+<% include ../partials/footer.ejs %>
