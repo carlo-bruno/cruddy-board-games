@@ -2,9 +2,9 @@
 <main class="new">
 
   <h2>Add New Game</h2>
-  <form method="POST" action="/games">
+  <form id="newform" method="POST" action="/games">
     <input type="text" name="name" placeholder="Game Name" /><br />
-    <input type="text" name="description" placeholder="Game Description" /><br />
+    <textarea name="description" form="newform" class="text-area" placeholder="Game Description"></textarea>
     <input type="text" name="players" placeholder="Max Players" />
     <br />
     <input type="submit" class="button" value="Create"/>
