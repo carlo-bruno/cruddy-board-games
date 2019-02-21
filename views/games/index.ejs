@@ -1,15 +1,15 @@
 <% include ../partials/header.ejs %>
+<main class="index">
 
-<h1>GAMES INDEX</h1>
+  <% games.forEach(game=> { %>
+    <div class="game-box">
+      <a href="/games/<%=game.id %>" class="game-name" ><%= game.name %></a>
+      <a href="/games/<%= game.id %>/edit" class="button">Edit</a>
+      <form method="POST" action="/games/<%= game.id %>?_method=DELETE">
+        <input type="submit" value="Delete" class="button">
+      </form>
+    </div>
+  <% }) %>
 
-<% games.forEach(game=> { %>
-  <div>
-    <a href="/games/<%= game.id %>/edit">edit</a>
-    <form method="POST" action="/games/<%= game.id %>?_method=DELETE">
-      <input type="submit" value="Delete">
-    </form>
-    <a href="/games/<%=game.id %>"><%= game.name %></a>
-  </div>
-<% }) %>
-
+</main>
 <% include ../partials/footer.ejs %>

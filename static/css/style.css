@@ -3,10 +3,170 @@
   padding: 0;
   box-sizing: border-box;
 }
-body {
+html {
   background-color: #bbb;
+  background-image: url(http://wellworthsurgical.com/wp-content/uploads/parser/board-game-background-1.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+}
+body {
+  width: 90%;
+  margin: 2em auto;
 }
 
-form {
+a,
+a:visited {
+  color: #2865a2;
+}
+
+/* Header ----------------------------------------- */
+
+header {
+  width: 90%;
+  max-width: 1140px;
+  margin: 10px auto 30px;
+  text-align: center;
+
+  background-color: #bbb;
+
+  padding: 20px 0;
+  border: 0.25em solid black;
+  border-radius: 5px;
+}
+
+header h1 {
+  margin-bottom: 15px;
+}
+
+nav a,
+nav a:visited {
+  font-size: 1.5rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: black;
   display: inline-block;
+  /* width: 180px; */
+  border-bottom: 3px solid transparent;
+  margin: 0 20px;
+  letter-spacing: 0.7px;
+}
+
+nav a:hover {
+  color: #2865a2;
+  border-bottom: 3px solid #2865a2;
+}
+
+/* Main ------------------------------------------- */
+main {
+  width: 90%;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 20px 30px;
+
+  background-color: #bbb;
+
+  border: 0.25em solid black;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Forms ------------------------------------------ */
+.new form,
+.edit form {
+  width: 325px;
+}
+form input {
+  display: block;
+  width: 100%;
+  height: 35px;
+  font-size: 1.1rem;
+  line-height: 1.4rem;
+}
+
+/* Buttons ---------------------------------------- */
+
+.button {
+  display: inline-block;
+  width: 150px;
+  height: 32px;
+  border: 1px solid #333;
+  border-radius: 5px;
+  box-shadow: 2px 2px 1px #333;
+  padding: 5px 15px;
+  margin: 0 5px;
+
+  font-size: 1.1rem;
+  color: black;
+  background-color: white;
+  text-decoration: none;
+  text-align: center;
+  font-family: sans-serif;
+
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #4776a5;
+  color: white;
+}
+
+.lift {
+  transform: translateY(-2px);
+}
+
+/* Index Page ------------------------------------- */
+.game-box {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  width: 80%;
+  border: 1px solid black;
+  margin: 5px;
+  padding: 5px;
+}
+
+.game-box .game-name {
+  display: block;
+  width: 20%;
+
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  color: #333;
+}
+
+.game-box .game-name:hover {
+  color: #2865a2;
+}
+
+/* Show Page + New / Edit ------------------------- */
+.show h2,
+.new h2,
+.edit h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.show h2:after {
+  display: block;
+  content: "";
+  width: 100%;
+  margin: 5px 0;
+  height: 2px;
+  background-color: #000;
+}
+
+.show h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.show p {
+  font-size: 1.3rem;
+  margin-bottom: 25px;
 }
